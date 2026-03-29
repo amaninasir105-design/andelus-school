@@ -1,0 +1,268 @@
+* General pastel theme */
+body {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  margin: 0;
+  color: #222;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  background: url("images/bg1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(173, 216, 230, 0.4);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #add8e6, #e6e6fa, #ffe4e1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #004080;
+  font-family: "Georgia", serif;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+/* Navigation */
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background: #add8e6;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 220px;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.7);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li a {
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #004080;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  display: block;
+}
+
+.lang-select select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Content layer */
+.content-layer {
+  background: rgba(173, 216, 230, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 90%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.content-layer:hover {
+  box-shadow: 0 0 20px rgba(173, 216, 230, 0.8), 0 0 40px rgba(173, 216, 230, 0.6);
+  transform: scale(1.02);
+}
+
+/* Icon row */
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.icon-box {
+  text-align: center;
+  margin: 10px;
+}
+
+.icon-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  background: #ff9999;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background: #76aaea;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-lang {
+  margin-top: 10px;
+}
+
+.footer-lang select {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-layer {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .icon-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-layer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+/* Gel-like content layer */
+.content-layer {
+  background: linear-gradient(145deg, rgba(173, 216, 230, 0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.6),
+              inset -2px -2px 6px rgba(0, 64, 128, 0.2),
+              0 6px 15px rgba(0, 64, 128, 0.3);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover glow */
+.content-layer:hover {
+  box-shadow: inset 2px 2px 8px rgba(255, 255, 255, 0.8),
+              inset -2px -2px 8px rgba(0, 64, 128, 0.3),
+              0 0 25px rgba(173, 216, 230, 0.9),
+              0 0 50px rgba(173, 216, 230, 0.6);
+  transform: translateY(-3px) scale(1.01);
+}
+
+/* Gel-like nav menu */
+.nav-links {
+  background: linear-gradient(145deg, rgba(173, 216, 230, 0.85), rgba(255, 255, 255, 0.4));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.6),
+              inset -1px -1px 4px rgba(0, 64, 128, 0.2),
+              0 4px 12px rgba(0, 64, 128, 0.3);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .content-layer {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-layer {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Gallery grid layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two columns */
+  gap: 30px; /* spacing between boxes */
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+/* Each photo box */
+.gallery-item {
+  background: rgba(173, 216, 230, 0.4); /* pastel transparent background */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styling */
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* stack boxes on smaller screens */
+  }
+}

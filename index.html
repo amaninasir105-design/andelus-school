@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andelus - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+   <a href="index.html">
+    <img src="images/andelus-logoo.png" alt="Andelus Logo" class="logo">
+   </a>
+    <h1>Andelus</h1>
+
+    <!-- Single hamburger icon -->
+     <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav">
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="lang-select">
+        <select onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="am">Amharic</option>
+          <option value="or">Oromo</option>
+        </select>
+      </li>
+      </ul>
+    </nav>
+    <!-- Language selector -->
+<div id="google_translate_element"></div>
+
+  </header>
+<main>
+  <div class="content-layer">
+  <section class="section">
+    <h2>Welcome</h2>
+  <section id="home" class="section home-background">
+    <p>Welcome to Andelus, a place of learning, growth and community. Our mission is to provide quality education and nurture future leaders.</p>
+    <section>
+    <br>
+  </section>
+    <section><br>WE ARE AUTHENTIC<br></section>
+  </section>
+</div>
+</main>
+  <footer>
+    <p>&copy; 2026 Andelus. All rights reserved.</p>
+  </footer>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en', 
+        includedLanguages: 'en,am,om', 
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
+
